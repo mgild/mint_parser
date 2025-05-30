@@ -1,0 +1,21 @@
+[package]
+name = "dynamic-amm"
+version = "0.6.1"
+description = "Created with Anchor"
+edition = "2021"
+
+[features]
+default = ["cpi"]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+localnet = []
+staging = []
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "dynamic_amm"
+
+[dependencies]
+anchor-lang = { workspace = true, features = ["event-cpi"] }
+anchor-spl = { workspace = true }
+solana-program = { workspace = true }

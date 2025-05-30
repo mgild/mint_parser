@@ -1,0 +1,12 @@
+[package]
+name = "fixed-exp"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "fixed_exp"
+
+[dependencies]
+fixed = { workspace = true }
+num-traits = { workspace = true }
+typenum = { workspace = true }

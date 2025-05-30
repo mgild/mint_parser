@@ -1,0 +1,32 @@
+[package]
+name = "stabble-weighted-swap"
+version = "1.1.0"
+edition = "2021"
+
+[features]
+default = ["cpi"]
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+jupiter-amm = [
+    "dep:anyhow",
+    "dep:rust_decimal",
+    "dep:jupiter-amm-interface",
+    "dep:spl-token",
+    "dep:spl-token-2022",
+    "dep:spl-associated-token-account",
+]
+anchor-debug = []
+no-idl = []
+no-log-ix-name = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+anyhow = { workspace = true, optional = true }
+rust_decimal = { workspace = true, optional = true }
+jupiter-amm-interface = { workspace = true, optional = true }
+spl-token = { workspace = true, optional = true }
+spl-token-2022 = { workspace = true, optional = true }
+spl-associated-token-account = { workspace = true, optional = true }
+bn = { path = "../../libraries/bn" }
+math = { path = "../../libraries/math" }
+stabble-vault = { path = "../vault" }

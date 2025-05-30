@@ -1,0 +1,13 @@
+[package]
+name = "stabble-vault"
+version = "1.1.0"
+edition = "2021"
+
+[features]
+default = ["cpi"]
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+solana-program = { workspace = true }

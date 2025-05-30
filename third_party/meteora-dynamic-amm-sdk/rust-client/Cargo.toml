@@ -1,0 +1,25 @@
+[package]
+name = "cli"
+version = "0.0.5"
+edition = "2021"
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+anchor-client = { workspace = true }
+clap = { version = "3.2.25", features = ["derive", "env"] }
+solana-program = { workspace = true }
+solana-rpc-client = { workspace = true }
+solana-sdk = { workspace = true }
+spl-associated-token-account = { workspace = true }
+anyhow = { workspace = true }
+spl-token = { workspace = true }
+bincode = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+mpl-token-metadata = { workspace = true }
+prog_dynamic_amm = { path = "../programs/dynamic-amm", package = "dynamic-amm" }
+prog_dynamic_vault = { path = "../programs/dynamic-vault", package = "dynamic-vault" }
+regex = { workspace = true }
+dynamic-amm-quote = { path = "../dynamic-amm-quote" }
+common = { path = "../common" }

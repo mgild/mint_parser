@@ -1,0 +1,15 @@
+[package]
+name = "math"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "math"
+
+[dependencies]
+num-traits = { workspace = true }
+thiserror = { workspace = true }
+typenum = { workspace = true }
+fixed = { workspace = true }
+fixed-exp = { path = "../fixed-exp" }
+bn = { path = "../bn" }
